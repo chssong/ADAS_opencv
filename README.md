@@ -14,8 +14,7 @@ ADAS구현을 위해 객체 인식 연습하기
 : 블랙박스 영상 가져와서  
 흑백으로 변환, 평탄화, 이미지 resize, Edge Detection  
 -> ROI설정해서 관심 영역만 화면에 출력하기  
-![333](https://user-images.githubusercontent.com/105180751/171774105-fb195b5e-1b9b-4263-bfca-56faac750745.JPG)  
-
+!<img src="https://user-images.githubusercontent.com/105180751/171774105-fb195b5e-1b9b-4263-bfca-56faac750745.JPG" width="450" height="300"/> 
 
 3. 'HoughLine.py'  
 차선 검출 방법 연습2  
