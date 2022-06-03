@@ -34,7 +34,7 @@ cv2.HoughLinesP()를 이용해서 원본 이미지에 검출된 선 overlap
 차선 인식이 가장 어려운 frame을 골라 'frame1'폴더에 저장 (Debug) -> 효율적인 개발 환경 
 <br/><br/>
 ![44](https://user-images.githubusercontent.com/105180751/171839198-578dac78-b5c3-4a74-822a-5173a1ad9064.JPG)
-<br/><br/><br/>
+<br/><br/>
 
 5. 'HSV.py'
 'HoughLine.py' 에서 그림자 인식, 어두울 때 차선 인식X, 노란 중앙선 인식X 문제를 해결하기 위해 HSV로 변환하여 영상처리 시도.  
