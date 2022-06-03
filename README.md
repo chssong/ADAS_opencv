@@ -7,8 +7,7 @@ ADAS구현을 위해 객체 인식 연습하기
 블랙박스 영상 가져오기  
 : while문 안에 cv2.VideoCapture() 사용해서 30프레임당 하나씩 이미지 추출  
 -> frame 폴더에 frame1, frame2,... 이름으로 저장
-
-![1](https://user-images.githubusercontent.com/105180751/171773260-2b4b3fc0-b639-4654-9b85-b04a32858e6f.JPG)
+<img src="https://user-images.githubusercontent.com/105180751/171773260-2b4b3fc0-b639-4654-9b85-b04a32858e6f.JPG" width="625" height="250"/> 
 
 2. 'LaneDetection.py'  
 차선 검출 방법 연습1  
