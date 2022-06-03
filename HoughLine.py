@@ -1,5 +1,5 @@
 # -*- coding: cp949 -*-
-# -*- coding: utf-8 -*- # 한글 주석쓰려면 이거 해야함
+# -*- coding: utf-8 -*-
 import cv2  # opencv 사용
 import numpy as np
 
@@ -8,11 +8,7 @@ def grayscale(img):  # 흑백이미지로 변환
    return cv2.cvtColor(img, cv2.COLOR_RGB2GRAY)
 
 
-def canny(img, low_threshold, high_threshold):  # Canny 알고리즘
-   return cv2.Canny(img, low_threshold, high_threshold)
-
-
-def gaussian_blur(img, kernel_size):  # 가우시안 필터
+def gaussian_blur(img, kernel_size):  # Gaussian 필터
    return cv2.GaussianBlur(img, (kernel_size, kernel_size), 0)
 
 
@@ -69,6 +65,7 @@ while(True):
    if not retval:
       break
 
+   # 이미지 resize
    image = cv2.resize(src, (int(frame_size[0] / 2), int(frame_size[1] / 2)))
 
    height, width = image.shape[:2]  # 이미지 높이, 너비
@@ -78,7 +75,6 @@ while(True):
    #blur_img = gaussian_blur(gray_img, 3)  # Blur 효과
    equal_img = cv2.equalizeHist(gray_img) #평탄화 필터 적용
    canny_img=cv2.Canny(equal_img, 5000, 1500, apertureSize = 5, L2gradient = True)
-   #canny_img = canny(equal_img, 50, 200)  # Canny edge 알고리즘
 
    vertices = np.array(
       [[(133, height-70), (width/2-10, height/2+120), (width/2+10, height/2+120), (width-133, height-70)]],
@@ -92,9 +88,4 @@ while(True):
    #cv2.imshow('canny', canny_img)
    cv2.imshow('roi_mask', ROI_img)
    cv2.imshow('result', result)  # 결과 이미지 출력
-
-
    cv2.waitKey(20)
-
-
-# https://yeowool0217.tistory.com/558 필터
